@@ -52,8 +52,8 @@ $kanto = [
     '茨城県' => '水戸市'
 ];
 
-foreach ($kanto as $japan) {
-    echo $japan . "\n";
+foreach ($kanto as $ken) {
+    echo $ken . "\n";
 }
 
 // Q8 連想配列-2
@@ -108,7 +108,7 @@ if ($number % 2 !== 0) {
 } else {
     return $number . 'は偶数です。';
 }
-}
+
 
 echo distinguishNum(11);
 echo distinguishNum(24);

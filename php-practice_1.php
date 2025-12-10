@@ -20,17 +20,10 @@ echo '現在時刻は、' . $now . 'です。';
 
 $device = 'windows';
 
-if ($device === 'windows') {
-    echo '「使用OSは、windowsです。」';
-
+if ($device === 'windows' || $device === 'mac') {
+    echo '使用OSは、' . $device . 'です。';
 } else {
-
-    if ($device === 'mac') {
-    echo '「使用OSは、macです。」';
-
-} else {
-    echo '「どちらでもありません。」';
-}
+    echo 'どちらでもありません';
 }
 
 // Q5 条件分岐-2 三項演算子
@@ -44,7 +37,7 @@ echo $message;
 
 $prefectures = ['東京', '神奈川', '埼玉', '群馬', '栃木', '茨城', '千葉'];
 
-echo $prefectures[2] . 'と' . $prefectures[3] . 'は関東地方の都道府県です';
+echo $prefectures[2] . 'と' . $prefectures[3] . "は関東地方の都道府県です \n";
 
 
 // Q7 連想配列-1
@@ -57,7 +50,7 @@ $kanto = [
     '栃木県' => '宇都宮氏',
     '群馬県' => '前橋氏',
     '茨城県' => '水戸市'
-    ];
+];
 
 foreach ($kanto as $japan) {
     echo $japan . "\n";
@@ -65,10 +58,8 @@ foreach ($kanto as $japan) {
 
 // Q8 連想配列-2
 
-$pref = '埼玉県';
-
-if ($pref === '埼玉県') {
-    echo $pref . 'の県庁所在地は、' . $kanto[$pref] . 'です。';
+foreach (['埼玉県'] as $prefecture) {
+    echo $prefecture . 'の県庁所在地は、' . $kanto[$prefecture] . 'です。';
 }
 
 // Q9 連想配列-3
@@ -122,7 +113,7 @@ if ($number % 2 !== 0) {
 echo distinguishNum(11);
 echo distinguishNum(24);
 
-// Q13 関数とswitch文　- 解説
+// Q13 関数とswitch文
 
 function evaluateGrade($grade) {
     switch ($grade) {

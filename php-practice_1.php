@@ -58,7 +58,8 @@ foreach ($kanto as $ken) {
 
 // Q8 連想配列-2
 
-foreach (['埼玉県'] as $prefecture) {
+foreach ($kanto as $prefecture => $city) {
+    if ($prefecture === '埼玉県')
     echo $prefecture . 'の県庁所在地は、' . $kanto[$prefecture] . 'です。';
 }
 

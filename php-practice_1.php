@@ -59,8 +59,9 @@ foreach ($kanto as $ken) {
 // Q8 連想配列-2
 
 foreach ($kanto as $prefecture => $city) {
-    if ($prefecture === '埼玉県')
-    echo $prefecture . 'の県庁所在地は、' . $kanto[$prefecture] . 'です。';
+    if ($prefecture === '埼玉県') {
+        echo $prefecture . 'の県庁所在地は、' . $kanto[$prefecture] . 'です。';
+    }
 }
 
 // Q9 連想配列-3

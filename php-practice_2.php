@@ -7,9 +7,9 @@ for ($i = 1; $i <= 100; $i++) {
   } elseif ($i % 4 === 0) {
     echo "tic" . "\n";
   } elseif ($i % 5 === 0) {
-      echo "tac" . "\n";
-    }else {
-      echo $i . "\n";
+    echo "tac" . "\n";
+  } else {
+    echo $i . "\n";
   }
 }
 
